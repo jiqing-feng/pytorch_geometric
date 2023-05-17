@@ -1,6 +1,8 @@
 # flake8: noqa
 
 from .feature_store import FeatureStore, TensorAttr
+# from .local_feature_store import LocalFeatureStore
+# from .local_graph_store import LocalGraphStore
 from .graph_store import GraphStore, EdgeAttr
 from .data import Data
 from .hetero_data import HeteroData

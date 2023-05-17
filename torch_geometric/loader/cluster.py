@@ -112,7 +112,7 @@ class ClusterData(torch.utils.data.Dataset):
 
         row, col, _ = adj.coo()
         data.edge_index = torch.stack([row, col], dim=0)
-
+        data.eid = edge_idx
         return data
 
     def __repr__(self):
