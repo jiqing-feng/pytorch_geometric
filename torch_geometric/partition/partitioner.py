@@ -171,10 +171,11 @@ class Partitioner():
                         type_node_feat = cluster_data[pid].x[mask, :]
                         node_feature_store.put_tensor(type_node_feat,
                                                       group_name=f'part_{pid}',
-                                                      attr_name=node_name)
+                                                      attr_name=node_name,
+                                                      index=None)
                         node_feature_store.set_global_ids(
                             type_node_id, group_name=f'part_{pid}',
-                            attr_name=node_name, index=None)
+                            attr_name=node_name)
                     torch.save(node_feature_store,
                                os.path.join(subdir, 'node_feats.pt'))
 
